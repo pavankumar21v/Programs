@@ -2,7 +2,7 @@ package com.sort;
 
 class QuickSort {
 
-    int partition(int arr[], int low, int high)
+    private int partition(int arr[], int low, int high)
     {
         int pivot = arr[high];
         int i = low-1;
@@ -22,7 +22,7 @@ class QuickSort {
         return i+1;
     }
 
-    void sort(int arr[], int low, int high) {
+    private void sort(int arr[], int low, int high) {
         if (low < high) {
             int pi = partition(arr, low, high);
             sort(arr, low, pi-1);
@@ -30,17 +30,16 @@ class QuickSort {
         }
     }
 
-    static void printArray(int arr[]) {
-        int n = arr.length;
-
-        for (int i=0; i<n; ++i)
-            System.out.print(arr[i]+" ");
-        System.out.println();
+    private static void printArray(int arr[]) {
+        for (int anArr : arr)
+            System.out.print(anArr + " ");
+            System.out.println();
     }
 
     public static void main(String args[]) {
-        int arr[] = {10, 7, 8, 9, 1, 5};
+        int [] arr = {10, 7, 8, 9, 1, 5};
         int n = arr.length;
+        printArray(arr);
 
         QuickSort ob = new QuickSort();
         ob.sort(arr, 0, n-1);

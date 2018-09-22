@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Set;
 
 public class DuplicateWordsInString {
-    public static void duplicateWords(String inputString) {
+    private static void duplicateWords(String inputString) {
         String[] words = inputString.split(" ");
         HashMap<String, Integer> wordCount = new HashMap<String, Integer>();
 
