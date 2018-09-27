@@ -6,7 +6,7 @@ import static java.lang.Thread.sleep;
 import static javafx.application.Platform.exit;
 
 public class ProducerConsumer {
-    public static void main(String[] args) {
+    public static void main(String...args) {
         final PC pc = new PC();
 
         Thread t1 = new Thread(() -> {
